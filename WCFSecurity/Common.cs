@@ -55,23 +55,23 @@ namespace WCFSecurity
         }
 
 
-        //public string Decrypt(string message, string key)
-        //{
-        //    SymmetricAlgorithm symmetricAlgorithm = new RijndaelManaged
-        //    {
-        //        KeySize = 128
-        //    };
-        //    symmetricAlgorithm.Key = Convert.FromBase64String(key);
-        //    symmetricAlgorithm.Mode = CipherMode.CTS;
+        public string Decrypt(string message, string key)
+        {
+            SymmetricAlgorithm symmetricAlgorithm = new RijndaelManaged
+            {
+                KeySize = 128
+            };
+            symmetricAlgorithm.Key = Convert.FromBase64String(key);
+            symmetricAlgorithm.Mode = CipherMode.CTS;
 
-        //    ICryptoTransform cryptoTransform = symmetricAlgorithm.CreateDecryptor();
+            ICryptoTransform cryptoTransform = symmetricAlgorithm.CreateDecryptor();
 
-        //    Byte[] data = Encoding.UTF8.GetBytes(message);
+            Byte[] data = Encoding.UTF8.GetBytes(message);
 
-        //    var dataEncrypted = cryptoTransform.TransformFinalBlock(data, 0, data.Length);
+            var dataEncrypted = cryptoTransform.TransformFinalBlock(data, 0, data.Length);
 
-        //    return Convert.ToBase64String(dataEncrypted);
-        //}
+            return Convert.ToBase64String(dataEncrypted);
+        }
 
         #endregion
 
