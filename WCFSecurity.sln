@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSecurity", "WCFSecurity\WCFSecurity.csproj", "{B2541E21-05EF-4E83-8C95-E3E60C322873}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTestProject", "SecurityTestProject\SecurityTestProject.csproj", "{7ADA88C0-BE96-47EB-9699-33C31B9D1575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B2541E21-05EF-4E83-8C95-E3E60C322873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2541E21-05EF-4E83-8C95-E3E60C322873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2541E21-05EF-4E83-8C95-E3E60C322873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADA88C0-BE96-47EB-9699-33C31B9D1575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADA88C0-BE96-47EB-9699-33C31B9D1575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADA88C0-BE96-47EB-9699-33C31B9D1575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADA88C0-BE96-47EB-9699-33C31B9D1575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

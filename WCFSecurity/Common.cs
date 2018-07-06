@@ -43,13 +43,12 @@ namespace WCFSecurity
                 KeySize = 128
             };
             symmetricAlgorithm.Key = Convert.FromBase64String(key);
-            symmetricAlgorithm.Mode = CipherMode.CTS;
+            symmetricAlgorithm.Mode = CipherMode.ECB;
 
             ICryptoTransform cryptoTransform = symmetricAlgorithm.CreateEncryptor();
 
             Byte[] data = Encoding.UTF8.GetBytes(message);
-
-            var dataEncrypted = cryptoTransform.TransformFinalBlock(data , 0 , data.Length);
+            Byte[] dataEncrypted = cryptoTransform.TransformFinalBlock(data, 0, data.Length);
 
             return Convert.ToBase64String(dataEncrypted);
         }
@@ -62,15 +61,14 @@ namespace WCFSecurity
                 KeySize = 128
             };
             symmetricAlgorithm.Key = Convert.FromBase64String(key);
-            symmetricAlgorithm.Mode = CipherMode.CTS;
+            symmetricAlgorithm.Mode = CipherMode.ECB;
 
             ICryptoTransform cryptoTransform = symmetricAlgorithm.CreateDecryptor();
 
             Byte[] data = Encoding.UTF8.GetBytes(message);
+            Byte[] dataDecrypted = cryptoTransform.TransformFinalBlock(data, 0, data.Length);
 
-            var dataEncrypted = cryptoTransform.TransformFinalBlock(data, 0, data.Length);
-
-            return Convert.ToBase64String(dataEncrypted);
+            return Convert.ToBase64String(dataDecrypted);
         }
 
         #endregion
